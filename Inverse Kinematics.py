@@ -12,11 +12,12 @@ x=float(input())
 y=float(input())
 l=np.sqrt((x*x)+(y*y))
 x=0
-if l<=2:
+if l<=2:#for points within the hemisphere of radius 2
     x=1
 if x==1 :
    arm.ee = [x, y, 0.0]
-   if arm.angles[0]<=1.5707933 and arm.angles[0]>=-1.5707933:
+   #to account for points that require the joint angle to be less than 90 degree
+   if arm.angles[0]<=1.5707933 and arm.angles[0]>=-1.5707933:#pi/2=1.5707933
        print(arm.angles,"\n")
        print(np.round(np.rad2deg(arm.angles)),"\n")
    else:
