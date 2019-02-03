@@ -10,8 +10,12 @@ print(arm.ee,"\n")
 #reserse kinematics
 x=float(input())
 y=float(input())
-arm.ee = [x, y, 0.0]
-print(arm.angles,"\n")
-print(np.round(np.rad2deg(arm.angles)),"\n")
-
+l=np.sqrt((x*x)+(y*y))
+if l<=2 :
+   arm.ee = [x, y, 0.0]
+   print(arm.angles,"\n")
+   print(np.round(np.rad2deg(arm.angles)),"\n")
+else:
+    print("The given coordinates are out of bound")
+    
 
