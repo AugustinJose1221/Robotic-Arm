@@ -8,7 +8,10 @@ print(arm.ee,"\n")
 arm.angles = [np.pi/6, np.pi/3]
 print(arm.ee,"\n")
 #reserse kinematics
-arm.ee = [2/np.sqrt(2), 2/np.sqrt(2), 0.0]
+x=float(input())
+y=float(input())
+arm.ee = [x, y, 0.0]
 print(arm.angles,"\n")
 print(np.round(np.rad2deg(arm.angles)),"\n")
+
 
