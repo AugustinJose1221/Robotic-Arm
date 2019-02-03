@@ -11,11 +11,17 @@ print(arm.ee,"\n")
 x=float(input())
 y=float(input())
 l=np.sqrt((x*x)+(y*y))
-if l<=2 :
+x=0
+if l<=2:
+    x=1
+if x==1 :
    arm.ee = [x, y, 0.0]
-   print(arm.angles,"\n")
-   print(np.round(np.rad2deg(arm.angles)),"\n")
+   if arm.angles[0]<=1.5707933 and arm.angles[0]>=-1.5707933:
+       print(arm.angles,"\n")
+       print(np.round(np.rad2deg(arm.angles)),"\n")
+   else:
+       print("The given coordinates is not accessible")
 else:
     print("The given coordinates are out of bound")
-    
+
 
